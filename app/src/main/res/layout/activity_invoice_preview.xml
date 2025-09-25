@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Main layout for the bill -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Header Section -->
+        <!-- Shop Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="12dp">
+
+            <!-- Shop Name -->
+            <TextView
+                android:id="@+id/shopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textSize="28sp"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:letterSpacing="0.08"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Shop Address -->
+            <TextView
+                android:id="@+id/shopAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Street, City"
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:letterSpacing="0.05"
+                android:fontFamily="sans-serif" />
+
+            <!-- Shop Contact -->
+            <TextView
+                android:id="@+id/billshopContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"
+                android:letterSpacing="0.05"
+                android:fontFamily="sans-serif" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:background="#E0E0E0" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <!-- Invoice Number -->
+            <TextView
+                android:id="@+id/billinvoiceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice No: 001"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:letterSpacing="0.1"
+                android:lineSpacingExtra="2dp"/>
+
+            <!-- Invoice Date -->
+            <TextView
+                android:id="@+id/billinvoiceDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: 05/03/2025"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="2dp"/>
+        </LinearLayout>
+
+
+        <!-- Customer Details Section -->
+        <TextView
+            android:id="@+id/billcustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name: "
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="10dp" />
+
+
+        <TextView
+            android:id="@+id/billcustomerContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone: "
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Product List Section with Table -->
+        <TextView
+            android:id="@+id/billitemsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Items Purchased"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TableLayout
+                android:id="@+id/billproductTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:background="#FFFFFF"
+                android:stretchColumns="*">  <!-- Ensures proper column alignment -->
+
+                <!-- Table Header -->
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:background="#F1F1F1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Product Name"
+                        android:textColor="#212121"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:text="Qty"
+                        android:textColor="#212121"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:text="Price"
+                        android:textColor="#212121"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:text="Total"
+                        android:textColor="#212121"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+                </TableRow>
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tax and Discount Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/subtotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal: ₹200.0"
+                    android:textSize="14sp"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/taxAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tax (5%): ₹5.0"
+                    android:textSize="14sp"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/discountAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Discount: ₹10.0"
+                    android:textSize="14sp"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#BDBDBD"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/grandTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total: ₹195.0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#388E3C"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer Section -->
+        <TextView
+            android:id="@+id/paymentMethodDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Method: "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="#EEEEEE"
+            android:elevation="4dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabProceed"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_arrow_right"
+            android:backgroundTint="#1E88E5"
+        android:tint="@android:color/white"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:fabSize="normal"
+        app:useCompatPadding="true"
+        app:elevation="4dp"
+        app:maxImageSize="32dp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

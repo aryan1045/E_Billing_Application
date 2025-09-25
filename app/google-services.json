@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "883804493926",
+    "project_id": "e-billing-b57a6",
+    "storage_bucket": "e-billing-b57a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883804493926:android:848ee9779a4562a87d35a7",
+        "android_client_info": {
+          "package_name": "com.example.e_billing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEW8yPgpgTsmqaDWp05u0cvHwKDrXiX74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+
+  ],
+  "configuration_version": "1"
+}

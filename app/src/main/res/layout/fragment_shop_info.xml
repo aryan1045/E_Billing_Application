@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_dashboard"> <!-- Light Gray Background -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Shop Details Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:paddingBottom="12dp"/>
+
+                <!-- Shop Name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@android:color/white">
+
+                    <!-- Shop Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Shop Name"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxBackgroundMode="filled"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:startIconDrawable="@drawable/ic_menu_home">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/shopName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:inputType="textCapWords"
+                            android:paddingStart="52dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <!-- Owner Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Owner Name"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxBackgroundMode="filled"
+                        app:startIconDrawable="@drawable/ic_menu_myplaces"
+                        android:layout_marginTop="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ownerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:inputType="textCapWords"
+                            android:paddingStart="52dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Contact Number -->
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contact Number"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxBackgroundMode="filled"
+                        app:startIconDrawable="@drawable/ic_menu_call"
+                        app:endIconMode="clear_text"
+                        android:layout_marginTop="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/contactNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:inputType="phone"
+                            android:digits="0123456789"
+                            android:maxLength="10"
+                            android:paddingStart="52dp"
+                            android:paddingEnd="48dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- Shop Address -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Shop Address"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxBackgroundMode="filled"
+                        app:endIconMode="clear_text"
+                        android:layout_marginTop="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:startIconDrawable="@drawable/ic_menu_compass">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/shopAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:inputType="textCapSentences"
+                            android:paddingStart="52dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Save Button -->
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <!-- Reset Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/resetShopInfoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reset"
+                android:textSize="16sp"
+                app:cornerRadius="50dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp"
+                android:elevation="6dp"/>
+
+            <!-- Spacer (For Even Spacing) -->
+            <View
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"/>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveShopInfoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textSize="16sp"
+                app:cornerRadius="50dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:paddingVertical="12dp"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp"
+                android:elevation="8dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="@android:style/Widget.Material.ProgressBar.Small"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+</ScrollView>

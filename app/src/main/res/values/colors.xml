@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Theme Colors -->
+    <color name="md_theme_primary">#6D5E0F</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#F8E287</color>
+    <color name="md_theme_onPrimaryContainer">#534600</color>
+
+    <!-- Secondary Colors -->
+    <color name="md_theme_secondary">#665E40</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#EEE2BC</color>
+    <color name="md_theme_onSecondaryContainer">#4E472A</color>
+
+    <!-- Tertiary Colors -->
+    <color name="md_theme_tertiary">#43664E</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#C5ECCE</color>
+    <color name="md_theme_onTertiaryContainer">#2C4E38</color>
+
+    <!-- Error Colors -->
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_onErrorContainer">#93000A</color>
+
+    <!-- Background & Surface -->
+    <color name="md_theme_background">#FFF9EE</color>  <!-- Light Beige -->
+    <color name="md_theme_onBackground">#1E1B13</color>  <!-- Dark Text -->
+    <color name="md_theme_surface">#FFF9EE</color>  <!-- Light Background -->
+    <color name="md_theme_onSurface">#000000</color>  <!-- Black Text for Contrast -->
+
+    <!-- Surface Variants -->
+    <color name="md_theme_surfaceVariant">#EAE2D0</color>
+    <color name="md_theme_onSurfaceVariant">#4B4739</color>
+
+    <!-- Outline & Borders -->
+    <color name="md_theme_outline">#7C7767</color>
+    <color name="md_theme_outlineVariant">#CDC6B4</color>
+
+    <!-- Inverse Colors -->
+    <color name="md_theme_inverseSurface">#333027</color>
+    <color name="md_theme_inverseOnSurface">#F7F0E2</color>
+    <color name="md_theme_inversePrimary">#DBC66E</color>
+
+    <!-- Custom Colors for UI Elements -->
+    <color name="green">#64E64C</color>  <!-- Light Green -->
+    <color name="primary">#1976D2</color>  <!-- Bright Blue -->
+    <color name="primaryDark">#1565C0</color>  <!-- Dark Blue -->
+    <color name="primaryLight">#64B5F6</color>  <!-- Light Blue -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#E0E0E0</color>  <!-- Light Gray -->
+    <color name="card_bg">#F5F5F5</color>  <!-- Card Background -->
+
+    <!-- Fixed Custom Colors (Prevent Black-on-Black) -->
+    <color name="colorCustomColor1">#4CAF50</color>  <!-- Green -->
+    <color name="colorOnCustomColor1">#FFFFFF</color>  <!-- White -->
+    <color name="colorCustomColor1Container">#81C784</color>  <!-- Light Green -->
+    <color name="colorOnCustomColor1Container">#2E7D32</color>  <!-- Dark Green -->
+
+    <!-- Additional Theme Colors -->
+    <color name="colorPrimary">#0AFFEF</color>
+    <color name="colorSecondary">#FF007F</color>
+    <color name="colorBackground">#121212</color> <!-- Dark Mode -->
+    <color name="colorAccent">#1E1E1E</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorDisabled">#5A5A5A</color>
+
+    <color name="light_green">#A5D6A7</color>  <!-- Soft Light Green -->
+    <color name="light_orange">#FFD180</color>  <!-- Light Orange -->
+
+
+        <color name="table_header_bg">#3498db</color> <!-- Example: blue header -->
+
+
+        <color name="row_even_bg">#f0f0f0</color> <!-- Light gray for even rows -->
+        <color name="row_odd_bg">#ffffff</color> <!-- White for odd rows -->
+        <color name="text_color">#333333</color> <!-- Dark text color -->
+
+    <color name="red">#FF0000</color>
+    <color name="orange">#FFA500</color> <!-- Orange color -->
+    <color name="blue">#395EE9</color>
+
+
+
+
+        <color name="colorPrimaryDark">#1565C0</color> <!-- Darker Blue -->
+        <!-- Background Colors -->
+        <color name="background">#F5F5F5</color> <!-- Light Gray Background -->
+        <color name="light_gray">#E0E0E0</color> <!-- Light Gray (Divider, Borders) -->
+        <!-- Floating Action Button -->
+        <color name="fabBackground">#FF5722</color> <!-- Orange-Red -->
+        <!-- Misc Colors -->
+        <color name="colorOnSurface">#424242</color> <!-- Medium Dark Gray for Text -->
+
+    <color name="prmiump">#6200EE</color>
+    <color name="primiumo">#FF6F00</color>
+
+
+
+    <color name="background_light">#F7F9FC</color>
+    <color name="dark_blue">#0D47A1</color>
+
+
+
+
+
+
+
+
+
+    <!-- Light Mode Background -->
+    <color name="colorBackgroundd">#F5F5F5</color>
+
+</resources>

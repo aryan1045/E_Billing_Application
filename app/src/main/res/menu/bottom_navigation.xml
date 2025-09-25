@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_home"
+        android:iconTint="?attr/colorPrimary"
+        android:titleTextColor="?attr/colorPrimary"/>
+
+    <item
+        android:id="@+id/Invoice"
+        android:title="Invoice"
+        android:icon="@drawable/ic_note"
+        android:iconTint="?attr/colorSecondary"
+        android:titleTextColor="?attr/colorSecondary"/>
+
+    <!-- Add Item should be after Invoice -->
+    <item
+        android:id="@+id/add"
+        android:title="Add"
+        android:icon="@drawable/ic_add"
+    android:iconTint="?attr/colorPrimary"
+    android:titleTextColor="?attr/colorPrimary"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Shop Info"
+        android:icon="@drawable/ic_shop_info"
+        android:iconTint="?attr/colorPrimary"
+        android:titleTextColor="?attr/colorPrimary"/>
+
+</menu>

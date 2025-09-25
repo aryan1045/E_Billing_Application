@@ -1,0 +1,485 @@
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:paddingBottom="100dp"
+    android:background="@drawable/bg_dashboard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Shop Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/white">
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Customer Name Input -->
+        <!-- Customer Name Input with Material Design -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customerNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:boxStrokeColor="@color/black"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/customerNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Customer Name"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Customer Phone Number Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customerPhoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:boxStrokeColor="@color/black"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/customerPhoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Customer Phone Number"
+                android:textSize="16sp"
+                android:inputType="phone"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- 🔍 Search Bar with AutoComplete -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:boxStrokeColor="@color/black"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:endIconMode="clear_text"
+            android:elevation="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/searchProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search for a product..."
+                android:textSize="16sp"
+                android:padding="14dp"
+                android:dropDownHeight="250dp"
+                android:dropDownVerticalOffset="10dp"
+                android:dropDownHorizontalOffset="5dp"
+                android:popupElevation="6dp"
+                android:popupBackground="@drawable/dropdown_background"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!-- 📊 Billing Table -->
+
+            <!-- Table Header -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <TableLayout
+                android:id="@+id/billingTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:showDividers="middle"
+                android:divider="@android:color/darker_gray">
+
+                <!-- Table Header -->
+                <TableRow android:background="@color/light_gray">
+                    <TextView
+                        android:text="Item"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:text="Qty"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:text="Price"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"/>
+                    <TextView
+                        android:text="Total"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"/>
+                </TableRow>
+
+                <!-- Product Row -->
+
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/light_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="12dp">
+
+                <!-- Discount Label (Left Side) -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <!-- Toggle Switch (Centered) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/discountToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOff="₹"
+                        android:textOn="%"
+                        android:showText="true"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+                <!-- Discount Input (Right-Aligned) -->
+                <EditText
+                    android:id="@+id/discountInput"
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:inputType="numberDecimal"
+                    android:hint="0.00"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="6dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@color/light_gray"
+                    android:elevation="2dp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/light_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Tax Label -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tax"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <!-- Tax Input Field -->
+                <EditText
+                    android:id="@+id/taxInput"
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:inputType="numberDecimal"
+                    android:hint="0.00"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="6dp"
+                    android:background="@color/light_gray"
+                    android:elevation="2dp"/>
+
+                <!-- Percentage Symbol -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        <!-- 💰 Grand Total -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/light_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Grand Total Label -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Grand Total"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <!-- Grand Total Amount -->
+                <TextView
+                    android:id="@+id/grandTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 0.00"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/paymentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Payment Method Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Method"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:paddingBottom="6dp"/>
+
+                <!-- Payment Method Dropdown -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/black"
+                    app:endIconMode="dropdown_menu"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/paymentMethodSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Choose a payment method"
+                        android:textSize="13sp"
+                        android:paddingVertical="8dp"
+                        android:paddingHorizontal="10dp"
+                        android:dropDownHeight="160dp"
+                        android:popupElevation="6dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Payment Details Field (Initially Hidden) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/paymentDetailsLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/paymentDetailsEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Additional payment details"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="8dp"
+                        android:textSize="13sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+        <!-- Proceed and Preview Invoice Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Preview Invoice Button -->
+            <Button
+                android:id="@+id/previewInvoiceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Preview Invoice"
+                android:drawablePadding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:minHeight="48dp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <!-- Spacer for better alignment -->
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent"/>
+
+            <!-- Proceed Button -->
+            <Button
+                android:id="@+id/proceedBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Proceed"
+                android:drawablePadding="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+
+                android:minHeight="48dp"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
+
+
