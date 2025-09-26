@@ -13,8 +13,8 @@ import java.util.concurrent.Executors
 class SendMSG : AppCompatActivity() {
 
     companion object {
-        private const val ACCOUNT_SID = "AC5ca7a983b2598ede4ebc1f9b7074ee22"
-        private const val AUTH_TOKEN = "437c2ef7eecd4756e3748f492d99bacb"
+        private const val ACCOUNT_SID = ""
+        private const val AUTH_TOKEN = ""
         private const val TWILIO_WHATSAPP_NUMBER = "whatsapp:+14155238886"
     }
 
